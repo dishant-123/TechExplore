@@ -1,0 +1,18 @@
+/* font:focus 
+{
+    cursor: pointer;
+    
+} */
+li font{
+    /* font-size: 40px; */
+    cursor: pointer;
+}
+.login-button{
+    float: left;
+    /* font-size: 100px; */
+}
+.abc{
+    background-color :lightgray;
+    border : 1px solid black;
+    border-radius: 50px;
+}

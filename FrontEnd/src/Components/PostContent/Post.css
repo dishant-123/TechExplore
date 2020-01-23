@@ -1,0 +1,17 @@
+.mainDiv
+{
+    border:1px solid black;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top: 2%;
+    margin-bottom:2%;
+    box-shadow: 4px 6px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.innerDiv
+{
+    border:1px solid black;
+}
+.innerDivSelect
+{
+    width : 200px;
+}
