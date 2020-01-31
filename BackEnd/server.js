@@ -54,8 +54,7 @@ app.get('/admin/checkAuthorized/:email',async(req,res) =>{
 });
 // 
 
-// if(process.env.NODE_ENV)
-// {
+
 //     // app.use(express.static( '../FrontEnd/build' ) );
 //     console.log('HEllo')
 //     app.get('*', (req,res) =>{
@@ -64,12 +63,23 @@ app.get('/admin/checkAuthorized/:email',async(req,res) =>{
 //         res.sendFile(path.resolve('../FrontEnd/build/index.html'));
 //     })
 // }
+// if(process.env.NODE_ENV)
+// {
+// app.use(express.static(path.join(__dirname, '../FrontEnd/build')));
 
-app.use(express.static(path.join(__dirname, '../FrontEnd/build')));
+// app.get('*', function (request, response){
+//    response.sendFile(path.resolve(__dirname, '../FrontEnd/build', 'index.html'));
+// });
+// }
+// app.use("/",express.static("public/build"));
+if(process.env.NODE_ENV === 'production')
+{
+    app.use(express.static( './FrontEnd/build' ) );
 
-app.get('*', function (request, response){
-    response.sendFile(path.resolve(__dirname, '../FrontEnd/build', 'index.html'));
-});
+    app.get('*', (req,res) =>{
+        res.sendFile(path.join(__dirname,'build', 'index.html'));
+    })
+}
 
 //TO LISTEN THE SERVER...
 const PORT = process.env.PORT || 3001 ;    //if 3001 is not availabe then use another

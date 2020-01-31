@@ -84,56 +84,7 @@ router.post('/', async (req,res) => {
     });
     //like is handeleded.
     router.patch('/startUpDescription/likeHandle/:id', async (req,res) =>{
-        //  const user = {
-        //     name : req.body.name,
-        //     email  : req.body.email,
-        //     isLiked : true
-        // }
-        // const userFind  = await startUpDetails.findOne({_id : req.params.id,"like.email" : req.body.email});
-        // // console.log(userFind.like[0]._id);
-        // //want to like the post(description)
-        // if(userFind===null){
-        //     const updatedUserlike = await startUpDetails.updateOne(
-        //         {_id : req.params.id},
-        //         { $push : {like : user}}
-        //     );
-        //     //increment likes count for given post 
-        //     const incrementLikes = await startUpDetails.update (
-        //         {_id : req.params.id},
-        //         {$inc :{likesCount : +1}}
-        //     ) 
-        //     const allDetails = await startUpDetails.find();//for giving all the details with updated user like on that post.
-        //     return res.json({
-        //         allDetails : allDetails,
-        //         message : 'successfully liked post'
-        //     });
-        // }
-        // //want to dislike the post
-        // else{
-        //        //remove the user like from that post.
-        //         const dislikePostResponse = await startUpDetails.updateOne(
-        //             {_id : req.params.id},
-        //             {$pull : {like : {_id : userFind.like[0]._id}} }
-                    
-        //         );
-        //         // console.log(dislikePostResponse);
-        //         // decrement post likes by one
-        //         const decrementLikes = await startUpDetails.updateOne (
-        //             {_id : req.params.id},
-        //             {$inc :{likesCount : -1}}
-        //         ) 
-        //         const allDetails = await startUpDetails.find();//for giving all the details with updated user like on that post.
-        //          return res.json({
-        //             allDetails  : allDetails,
-        //             massage : 'succesfully disliked post'
-        //         })
-        // }
-        // const user = {
-        //     name : req.body.name,
-        //     email  : req.body.email,
-        //     id : req.params.id
-        // }
-
+        
         const userFind  = await userLikesSchema.findOne({email : req.body.email});
         console.log(userFind);
         //existing user want to dislike or like that post..

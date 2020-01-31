@@ -16,12 +16,14 @@ import Axios from 'axios';
          this.handleChange = this.handleChange.bind(this);
      }
      handleChange = (event)=>{
+         console.log(event.target.value)
             this.setState({
-                [event .target.name] : event.target.value
+                [event .target.name] : event.target.value,
+                selectedPath : event.target.value
             })
      }
      handleFormSubmit = async(event)=>{
-        event.preventDefault();
+        // event.preventDefault();
         var logginDetails = JSON.parse(localStorage.getItem("token"));
         if(logginDetails == null)
         {
@@ -86,7 +88,7 @@ import Axios from 'axios';
                                                         <option value = 'gadgetDetails'>Gadget</option>
                                                         <option value = 'video'>Video</option>
                                                         <option value = 'apps'>Apps</option>
-                                                        <option value= 'startUps'>StartUps</option>
+                                                        <option value= 'startUpDetails'>StartUps</option>
                                                     </select>
                                                 </div>
                                         </div>

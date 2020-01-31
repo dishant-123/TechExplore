@@ -70,7 +70,7 @@ class NavBar extends Component {
             innerContentChange = false;
             return <Redirect to = {{
                 pathname : '/',
-                middleContent :this.state.changeContent
+                middleContent : this.state.changeContent
             }} />
         }
         if(this.state.goToLoginPage){

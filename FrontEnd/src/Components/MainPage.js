@@ -10,6 +10,7 @@ import GoogleMaps from './GoogleMaps.js'
 import Profile from './Profile'
 import axios from 'axios'
 import StartUp from './StartUp/StartUp'
+
  class MainPage extends Component {
      constructor(props) {
          super(props);
