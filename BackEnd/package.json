@@ -30,7 +30,7 @@
     "nodemailer": "^6.3.1",
     "password-validator": "^5.0.3",
     "sharp": "^0.23.4",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "env-cmd": "^10.0.1",
